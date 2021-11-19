@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS6Prl9B.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Frame BackgroundColor="Aquamarine">
+            <Label Text="Tarea Semana 6 PRL B: Consumir web service GET, POST, PUT, DELETE" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+        </Frame>
+        <Label x:Name="texto" Text=""/>
+        <ListView x:Name="MyListView" HasUnevenRows="False" RowHeight="80" SeparatorColor="Purple" SeparatorVisibility="Default" ItemSelected="MyListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5" VerticalOptions="Center">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblNombre" FontSize="20" Text="{Binding nombre}" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End"/>
+                                <Label x:Name="lblApellido" FontSize="20" Text="{Binding apellido}" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnPost" Text="Insertar" Clicked="btnPost_Clicked"/>
+        <Button x:Name="btnPut" Text="Actualizar" Clicked="btnPut_Clicked"/>
+        <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"/>
+        <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked"/>
+        <Label Text="Estudiante: Andrés Rodríguez 9noB" TextColor="DarkViolet" FontSize="16" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+
+</ContentPage>

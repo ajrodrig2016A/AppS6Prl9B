@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS6Prl9B.viewActualizarB"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="VENTANA DE ACTUALIZACION" FontSize="Medium" HorizontalTextAlignment="Center"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Codigo: " Grid.Row="0" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtCodigo" Text="{Binding codigo}" Keyboard="Numeric" IsReadOnly="true" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Nombre: " Grid.Row="1" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtNombre" Text="{Binding nombre}" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Apellido: " Grid.Row="2" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtApellido" Text="{Binding apellido}" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Edad: " Grid.Row="3" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtEdad" Text="{Binding edad}" Keyboard="Numeric" Grid.Row="3" Grid.Column="1"/>
+                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="4" Grid.Column="0"/>
+                <Button x:Name="btnSalir" Text="Regresar" Clicked="btnSalir_Clicked" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

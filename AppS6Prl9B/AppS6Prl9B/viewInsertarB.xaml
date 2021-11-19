@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS6Prl9B.viewInsertarB"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="VENTANA DE INGRESO" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <!--<Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric" />-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre: " Grid.Row="0" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Apellido: " Grid.Row="1" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Edad: " Grid.Row="2" Grid.Column="0" Padding="10" />
+                <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+
+                <Button x:Name="btnIngresar" Text="Insertar" Clicked="btnIngresar_Clicked" Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="btnSalir" Text="Regresar" Clicked="btnSalir_Clicked" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
